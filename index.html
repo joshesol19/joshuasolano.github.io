@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Joshua Solano | Home</title>
+</head>
+
+<body>
+  <nav>
+    <div class="left">
+      <a href="index.html">Joshua Solano</a>
+    </div>
+
+    <button class="menu-toggle" id="mobile-menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="right" id="nav-links">
+      <a href="index.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+
+      <a href="portfolio.html">
+        <i class="fa-solid fa-folder-open"></i>
+        <span>Portfolio</span>
+      </a>
+      
+      <a href="https://www.linkedin.com/in/josh-solano/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+
+      <a class="resume" href="https://www.dropbox.com/scl/fi/qbpm349apl2xdz0t2u0ui/JoshuaSolanoResume.pdf?rlkey=clzkrbygwou5sbgxf5sxtyilt&st=kdafm7hz&dl=0">
+        <i class="fa-solid fa-file-arrow-down"></i>
+        <span>Resume</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section" id="top">
+      <div class="text">
+        <p class="eyebrow">BYU Information Systems • Data & BI Analytics Emphasis • 3.97 GPA</p>
+
+        <h1>Hi, I’m Josh 👋</h1>
+        <h2>I turn messy real-world data into decisions people actually use.</h2>
+
+        <p>
+            I’m an Information Systems student focused on business analytics, with hands-on experience using SQL, Python, Excel, 
+            and Tableau to turn messy data into clear, actionable insight. I build analytics that people actually use including dashboards,
+            Python Analysis, and full-stack applications. I’m strongest 
+            at bridging the gap between technical work and business decision-making: translating complex results into simple takeaways, 
+            prioritizing the metrics that matter, and delivering tools that reduce manual effort and improve how teams operate.
+        </p>
+        <br>
+
+        <div class="links">
+          <a href="https://www.linkedin.com/in/josh-solano/">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+
+
+          <a href="mailto:jsolano5@student.byu.edu">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+
+          <a href="portfolio.html">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Portfolio</span>
+          </a>
+        </div>
+        
+        <div class="quick-stats">
+            <div class="stat">
+              <p class="k">Data & BI</p>
+              <p class="v">SQL • Tableau • Power BI</p>
+              <p class="sub">MySQL • SQLite • PostgreSQL • Exploratory Data Analysis</p>
+            </div>
+          
+            <div class="stat">
+              <p class="k">Programming</p>
+              <p class="v">Python • JavaScript • Node.js</p>
+              <p class="sub">Pandas • NumPy • Matplotlib • Seaborn • Knex.js</p>
+            </div>
+          
+            <div class="stat">
+              <p class="k">Other</p>
+              <p class="v">AWS • Excel • HTML/CSS</p>
+              <p class="sub">RDS & Deployment • Pivot Tables • VBA</p>
+            </div>
+          </div>
+      </div>
+          
+
+      <div class="headshot">
+        <img src="images/headshot.png" alt="Josh Solano headshot" sizes="30%"/>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Existing year script
+    const yearSpan = document.getElementById("year");
+    if(yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>

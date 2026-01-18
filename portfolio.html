@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Joshua Solano | Portfolio</title>
+</head>
+
+<body>
+    <nav>
+      <div class="left">
+        <a href="index.html">Joshua Solano</a>
+      </div>
+      
+      <button class="menu-toggle" id="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    
+      <div class="right" id="nav-links">
+        <a href="index.html">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="portfolio.html" aria-current="page">
+          <i class="fa-solid fa-folder-open"></i>
+          <span>Portfolio</span>
+        </a>
+        <a href="https://www.linkedin.com/in/josh-solano/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a class="resume" href="https://www.dropbox.com/scl/fi/qbpm349apl2xdz0t2u0ui/JoshuaSolanoResume.pdf?rlkey=clzkrbygwou5sbgxf5sxtyilt&st=kdafm7hz&dl=0" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Resume</span>
+          </a>
+      </div>
+    </nav>
+    
+    <script>
+      const menuToggle = document.getElementById('mobile-menu');
+      const navLinks = document.getElementById('nav-links');
+    
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+
+  <main class="portfolio">
+  
+    <section class="section">
+      <h1>Portfolio</h1>
+      <p class="section-sub">
+        My work centers on the belief that every data point represents a real-world behavior waiting to be understood. 
+        Here you will find the projects where I have applied technical modeling to answer critical business questions.
+      </p>
+    </section>
+  
+    <!-- 1) Using data to solve real world problems -->
+    <section class="section" id="real-world">
+      <h2>Using Data to Solve Real-World Problems</h2>
+      <p class="section-sub">
+        Real problems can be solved with real data. Here is how I have implimented that.
+      </p>
+  
+      <div class="cards">
+        <article class="card">
+          <div class="card-top">
+            <div class="card-top-row">
+              <h3>Campuslytics.com — College Finance Tracker + Analytics</h3>
+          
+              <div class="badge-group">
+                <span class="badge">Product • Analytics • SQL • Node.Js • Python • Pandas • AWS RDS</span>
+                <span class="badge">Freelance Project</span>
+              </div>
+            </div>
+          </div>
+          <p>
+            <strong>Problem:</strong>
+            Over half of college students live paycheck to paycheck and struggle to understand where their money goes between pay periods.
+            Some try to track spending using personal spreadsheets; however, these tools lack context, require constant upkeep, and are often abandoned.
+            Traditional finance tools focus on individual transactions and running balances, making it difficult to identify spending patterns for students managing money paycheck by paycheck rather than on a fixed salary.
+            Students need visibility into their habits within each spending period so they can make better decisions and avoid blowing through their income.
+          </p>
+          
+          <p>
+            <strong>What I built:</strong>
+            I designed and deployed a full-stack finance analytics application that models spending around a
+            one-deposit to many-withdrawals relationship rather than a single mixed transaction table.
+            This structure allows each pay period to be analyzed independently.
+            Using PostgreSQL and Node.js for data storage and workflows, I integrated Python analytics
+            with Pandas and Matplotlib to generate personalized summaries, category trends, outlier detection,
+            and behavioral insights for each student.
+            The system also includes AI-generated recommendations that translate analytical findings into
+            clear, actionable guidance.
+          </p>
+          
+          <p>
+            <strong>Impact:</strong>
+            The application turns raw financial data into period-based insights that help students understand
+            how their spending changes over time and where adjustments can be made.
+            By focusing on trends rather than individual transactions, users gain clarity on saving opportunities
+            after each paycheck.
+            The project is deployed and actively used by students, demonstrating real-world adoption and practical value.
+          </p>
+
+          <p>
+            <strong>**Note for usage:</strong>
+            Feel free to test things out and explore the analysis. You may use username "testUser" with password "admin".
+            If you decide to edit or add data to test out how things change, that is totally okay and welcome! Just please do not change the 
+            data too much. Thanks!
+        </p>
+        <div class="card-links">
+
+          <!-- Live site FIRST -->
+          <a class="link" href="https://www.campuslytics.com"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Site
+          </a>
+        
+          <!-- Demo SECOND -->
+          <a class="link" href="https://youtu.be/k0uFFwM9_n0"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-video"></i> View Demo (6m)
+          </a>
+        
+          <!-- Optional dropdown -->
+          <div class="more-info">
+            <button class="more-info-btn" type="button"
+                    aria-haspopup="true" aria-expanded="false">
+              More info <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          
+            <div class="more-info-menu" hidden>
+              <a href="https://youtu.be/4kKZAqzTla8"
+                 target="_blank" rel="noopener noreferrer">
+                Technical Walkthrough (14:52)
+              </a>
+            </div>
+          </div>
+        
+        </div>
+        
+        
+        </div>
+        </article>
+      </div>
+    </section>
+  
+    <!-- 2) Data manipulation + prediction modeling -->
+    <section class="section" id="modeling">
+      <h2>SQL Queries/Data Manipulation & Prediction Modeling</h2>
+      <p class="section-sub">
+        Data cleaning, manipulations, joins, all tied into modeling prediction logic.
+      </p>
+  
+      <div class="cards">
+        <article class="card">
+        <div class="card-top">
+          <div class="card-top-row">
+                <h3>European Football Predictive Simulator</h3>
+
+            <div class="badge-group">
+                <span class="badge">Pandas • Python • SQL</span>
+                <span class="badge">Freelance Project</span>
+            </div>
+            </div>
+
+            <p><strong>Problem:</strong> Build a realistic match simulation system that predicts European football match outcomes based 
+                on team quality and roster construction rather than randomness. The goal was to model how differences in player ability, 
+                positional balance, and lineup choices influence match results in a way that reflects actua football dynamics for accurate prediction.</p>
+            <p><strong>What I built:</strong> A predictive simulation application built in Python using Pandas for 
+                data transformation and SQLite for relational data storage. The simulator operates on a normalized football database 
+                containing over 200,000 records of player, team, and match data across multiple seasons. I designed and executed complex multi table SQL queries 
+                to join teams, players, attributes, then converted player level ratings into team rosters with aggregated team 
+                strength scores. These scores are fed into probabilistic logic that simulates goals, match outcomes, and win probabilities which constantly change alongside
+                user interactions and decisions.</p>
+            <p><strong>Key functionality:</strong> The application allows users to adjust team rosters and lineups, rerun simulations, and compare outcomes across 
+                scenarios. By modifying player selections or tactical balance, users can observe how small changes in roster strength or positional depth affect predicted 
+                results. This enabled scenario testing and sensitivity analysis rather than a single static prediction.</p>
+            <p><strong>Focus:</strong> Advanced data manipulation with Pandas, writing and optimizing multi table SQL queries, enforcing relational integrity 
+                across datasets, and translating domain knowledge into predictive logic. Additional emphasis was placed on reproducibility, debugging simulation bias, 
+                and iteratively refining assumptions to produce stable and interpretable results.</p>
+          <div class="card-links">
+            <a class="link" href="https://www.dropbox.com/scl/fi/w78176t5qiqwg87b7cn16/Example-Output-European-Football-Simulator.pdf?rlkey=8sp20zks8h8ebm234r2amw95i&st=basguqf2&dl=0" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-file-lines"></i> Example Simulation Output
+            </a>
+            <a class="link" href="https://www.dropbox.com/scl/fi/4hmh9xvfxzoxue0hlyfuy/Relevant-Functions_Code-European-Football-Simulator.pdf?rlkey=rdbccfw9uq95k6llqz7u3i7d5&st=zldfd64e&dl=0" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-code"></i> Relevant SQL + Python Functions
+              </a>
+            <a class="link" href="https://github.com/joshesol19/EuropeanFootballSimulator.git" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  
+    <!-- 3) Data analysis -->
+    <section class="section" id="analysis">
+      <h2>Data Analysis</h2>
+      <p class="section-sub">
+        EDA that connects data patterns to real behavioral trends to solve problems.
+      </p>
+  
+      <div class="cards">
+        <article class="card">
+            <div class="card-top">
+                <div class="card-top-row">
+                  <h3>Ella Rises — STEAM Engagement & Outcomes EDA</h3>
+              
+                  <div class="badge-group">
+                    <span class="badge">Python • Pandas • EDA • Nonprofit Analytics • Presentation Skills</span>
+                  </div>
+                </div>
+              </div>
+            
+              <p>
+                <strong>Context:</strong>
+                Ella Rises is a nonprofit focused on increasing participation, graduation, and hiring of Latin American women in
+                STEAM (STEM + Arts) fields. The goal of this analysis was to identify which factors most strongly influence academic
+                and career outcomes (the company's KPIs) and which do not.
+              </p>
+            
+              <p>
+                <strong>Problem:</strong>
+                The organization tracked demographics, donations, milestones, surveys, and event attendance, but lacked clarity on
+                what actually drives STEAM degree completion and STEAM job placement.
+              </p>
+            
+              <p>
+                <strong>What I did:</strong>
+                I conducted an end-to-end exploratory data analysis in Python (Pandas, Seaborn, SciPy), cleaning and joining
+                multi-table program data to evaluate relationships between demographics, engagement, milestones, and outcomes.
+                I used statistical tests (t-tests, ANOVA, chi-square, correlation) to separate meaningful signals from noise.
+              </p>
+            
+              <p>
+                <strong>Key Insight:</strong>
+                Demographic and background variables (age, city, donations, milestone type) showed no meaningful statistical
+                relationship to degree completion or job outcomes. In contrast, <em>engagement</em>,especially attendance at
+                STEAM-focused events, was strongly associated with both STEAM degree completion and STEAM job placement.
+                General attendance mattered somewhat, but non-STEAM event attendance showed no comparable effect.
+              </p>
+            
+              <p>
+                <strong>Impact:</strong>
+                The findings suggest that targeted STEAM exposure drives outcomes more than demographics. This supports prioritizing
+                structured STEAM programming, increasing repeat engagement, and designing pathways that keep participants consistently
+                involved to improve long-term academic and career success. This led me to assist a team to deploy a web app solution to 
+                improve event engagement.
+              </p>
+              <div class="card-links">
+                <a class="link" href="https://colab.research.google.com/drive/1Ana25BhkJRoN-IbfwsS2nadMnbMlzyAc?usp=sharing"
+               target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-code"></i> View Code
+            </a>
+            <a class="link" href="https://www.dropbox.com/scl/fi/p7ptlbyeng0isda04eg61/EllaRisesSlides.pdf?rlkey=8unadscqn43px14yq2000ejos&st=4gdpx5ql&dl=0" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-file-lines"></i> Presentation Slides
+              </a>
+              </div>     
+              </div>
+          </article>
+          <br>
+          
+
+        
+        <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <div class="card-top-row">
+                  <h3>Ames Housing Market — Residential Real Estate Price Drivers EDA</h3>
+              
+                  <div class="badge-group">
+                    <span class="badge">Python • Pandas • EDA</span>
+                  </div>
+                </div>
+              </div>
+            
+              <p>
+                <strong>Context:</strong>
+                Ames, Iowa, serves as a primary case study for understanding housing market dynamics. Acting as a data analyst for a real estate firm, I investigated eight key factors influencing home valuations to provide data-driven insights for property investment and pricing strategies.
+              </p>
+            
+              <p>
+                <strong>Problem:</strong>
+                Needed to understand which specific features (such as neighborhood regions, garage types, material quality, etc.) statistically correlate with higher sale prices and exactly how much value these individual components add to a listing.
+              </p>
+            
+              <p>
+                <strong>What I did:</strong>
+                I performed an end to end exploratory data analysis in Python, utilizing Pandas for data cleaning and engineering. I applied a variety of statistical techniques, including linear regression to model price trends, ANOVA and Tukey HSD tests to compare categorical groups like neighborhood regions, and Chi-Square tests to evaluate the distribution of building types across the city.
+              </p>
+            
+              <p>
+                <strong>Key Insight:</strong>
+                The analysis revealed that Overall Quality and Living Area are the strongest predictors of price, with each additional square foot of living space adding approximately $107 to the home value. Significant regional disparities were identified; homes in the Northeast region sell for an average of $116,451 more than those in the Central region. While garage types and finished basements also showed statistical significance, exterior material quality proved to be a universal driver of value across all property types.
+              </p>
+            
+              <p>
+                <strong>Impact:</strong>
+                These findings provided a framework for the real estate team to prioritize renovations and identify undervalued properties. By quantifying the expected increase for specific upgrades, like finishing a basement or improving exterior materials, the firm can better predict ROI. This data served as the foundation for a polished data story used to guide future acquisition strategies and stakeholder presentations.
+              </p>
+              <div class="card-links">
+                <a class="link" href="https://colab.research.google.com/drive/1xr6HUY_WeDK3MaPkM1_QLH3R_NUFlmzj"
+               target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-code"></i> View Code
+            </a>
+            <a class="link" href="#" target="_blank" rel="noopener noreferrer">
+              </a>
+              </div>     
+            </article>
+          </div>
+          <br>
+          <article class="card">
+            <div class="card-top">
+                <div class="card-top-row">
+                  <h3>Postpartum Mental Health EDA</h3>
+              
+                  <div class="badge-group">
+                    <span class="badge">Python • Pandas • EDA • Presentation Skills</span>
+                  </div>
+                </div>
+              </div>
+              
+            <strong>Problem:</strong>
+            Maternal mental health outcomes are influenced by many overlapping factors, but it is often unclear which variables are meaningfully associated with anxiety, depression, and birth-related PTSD.
+            This analysis aimed to evaluate whether demographic characteristics, birth context, and infant sleep patterns showed statistically meaningful relationships with maternal mental health indicators.
+            The goal was to move beyond surface-level assumptions and identify which factors warrant deeper attention and which do not.
+          </p>
+          
+          <p>
+            <strong>What I did:</strong>
+            I conducted a full exploratory data analysis in Python using Pandas, Matplotlib, Seaborn, and statistical testing libraries.
+            The dataset required extensive preprocessing, including removing invalid survey responses, aggregating multi-part survey instruments into total depression, anxiety, and PTSD scores, and converting encoded numeric values into interpretable categorical variables.
+            I performed univariate analysis to understand distributions and skewness, followed by bivariate analysis using correlation, regression, ANOVA, and chi-square testing to evaluate relationships between mental health outcomes and contextual variables such as marital status and infant sleep behavior.
+          </p>
+          
+          <p>
+            <strong>Focus:</strong>
+            The analysis emphasized data cleaning, careful variable construction, and statistically grounded interpretation.
+            Key findings showed strong positive relationships between birth-related PTSD and both maternal depression and anxiety, while demographic factors such as marital status showed no statistically significant effect.
+            Results were communicated using clear visualizations and plain-language explanations to support interpretation by non-technical audiences.
+          </p>
+          
+          <div class="card-links">
+            <a class="link" href="https://colab.research.google.com/drive/1kWA6OEJoW3zLipTJw-w4Pa1cTY7laoLu?usp=sharing"
+               target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-code"></i> View Code
+            </a>
+            <a class="link" href="https://www.dropbox.com/scl/fi/tirszwa68ianioa4nh11z/MaternalMentalHealthSlides.pdf?rlkey=t9snbbgkgrqxswknwcifirmcf&st=xq67zc74&dl=0" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-file-lines"></i> Presentation Slides
+              </a>
+          </div>
+        </article>
+    </section>
+  
+    <!-- 4) Data visualization -->
+    <section class="section" id="viz">
+      <h2>Data Visualization</h2>
+      <p class="section-sub">
+        Exploratory dashboards built to help managment understand how factors effect outcomes.
+      </p>
+  
+      <div class="cards">
+        <article class="card">
+            <div class="card-top">
+                <div class="card-top-row">
+                  <h3>IS Recruiting Insights Dashboard and Storytelling Chart</h3>
+              
+                  <div class="badge-group">
+                    <span class="badge">Tableau</span>
+                  </div>
+                </div>
+              </div>
+              
+          
+            <p>
+              <strong>Context and Problem:</strong>
+              The Information Systems department uses recruiting events, prerequisite classes, and advising touchpoints to encourage students to apply to the program.
+              While survey data existed on which activities students attended and how influential they were, the recruiting committee lacked a clear, data-driven view of what was actually working and where efforts should be adjusted.
+              The challenge was to translate raw survey and application data into insights that could directly inform future recruiting decisions.
+            </p>
+          
+            <p>
+              <strong>What I built:</strong>
+              I designed an interactive Tableau dashboard using real recruiting survey data from 2024 and 2025 that allows non-technical users to explore influence patterns across classes, recruiting activities, and demographic filters.
+              The dashboard is fully filterable by year and gender and includes views showing average influence scores, counts of “very influential” ratings, and how students heard about the IS program.
+              In addition, I created a one-slide storytelling chart focused on explaining the decline in applications in 2025, with particular attention to changes in female applicants.
+            </p>
+          
+            <p>
+              <strong>Impact:</strong>
+              The dashboard highlights which classes and recruiting activities consistently influence students’ decisions and which show weaker or declining impact.
+              These insights provide the recruiting committee with clear evidence to support reallocating resources, refining outreach strategies, and strengthening high-impact touchpoints.
+              The work was created to address an active departmental need and is suitable for sharing with faculty, staff, and advisory board members to guide real recruiting strategy.
+            </p>
+
+          
+            <div class="card-links">
+              <a class="link"
+                 href="https://public.tableau.com/views/Book1_17424026235860/FinalDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                View Dashboard
+              </a>
+            </div>
+          </article>
+          
+
+        <article class="card">
+            <div class="card-top">
+                <div class="card-top-row">
+                  <h3>Power BI — Superstore Profit Dashboard (Tableau Recreation)</h3>
+              
+                  <div class="badge-group">
+                    <span class="badge">Power BI</span>
+                  </div>
+                </div>
+              </div>
+          
+            <p>
+              <strong>Objective:</strong> Recreate a previously built Tableau profit dashboard in Power BI to evaluate
+              Superstore performance, while learning Power BI’s data modeling, visualization, and formatting mechanics.
+              The goal was to preserve the original dashboard’s layout and design principles while adapting to a new BI tool.
+            </p>
+          
+            <p>
+              <strong>What I built:</strong> An interactive Power BI dashboard featuring key performance indicators for
+              total profit and total sales, a continuous line chart showing profit trends over time by order date,
+              and multiple breakdowns of profitability by category and sub-category. Conditional formatting was used
+              to clearly distinguish positive and negative profit, helping surface loss-driving products at a glance.
+            </p>
+          
+            <p>
+              <strong>Design & interactivity:</strong> The dashboard mirrors the Tableau layout and includes a category
+              slicer to support focused analysis. Visual hierarchy, consistent color usage, and minimal chart clutter
+              were prioritized to ensure the dashboard is easy to interpret for non-technical stakeholders.
+            </p>
+          
+            <div class="card-links">
+              <a class="link" href="https://app.powerbi.com/links/Qtw4i2L6sX?ctid=c6fc6e9b-51fb-48a8-b779-9ee564b40413&pbi_source=linkShare"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View Dashboard
+              </a>
+              <a class="link" href="https://www.dropbox.com/scl/fi/cfrk1r7cp4q2lnw1x4cwz/Sales-Profit-Performance-Dashboard.png?rlkey=t30ojq72gvkwi7v4cbdho4wam&st=01u2ksz0&dl=0"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-image"></i> No Login? View Screenshot
+              </a>
+            </div>
+          </article>
+          
+      </div>
+    </section>
+  </main>
+</body>
+<script>
+  (function () {
+    const btn = document.querySelector('.more-info-btn');
+    const menu = document.querySelector('.more-info-menu');
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = !menu.hasAttribute('hidden');
+      menu.toggleAttribute('hidden', open);
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+
+    document.addEventListener('click', () => {
+      menu.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+
+    menu.addEventListener('click', (e) => e.stopPropagation());
+  })();
+</script>
+
+</html>
